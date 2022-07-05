@@ -14,7 +14,7 @@ ${AS} -o ${RESDIR}/$1.o ${RESDIR}/$1.s
 ${AS} -o ${RESDIR}/start.o start.s
 ${CC} ${CFLAGS} io.c -o ${RESDIR}/io.s
 ${AS} -o ${RESDIR}/io.o ${RESDIR}/io.s
-${LD} -s -e -o ${RESDIR}/$1.bin ${RESDIR}/start.o ${RESDIR}/io.o ${RESDIR}/$1.o
+${LD} -ns -ne -o ${RESDIR}/$1.bin ${RESDIR}/start.o ${RESDIR}/io.o ${RESDIR}/$1.o
 python3 mkhex.py ${RESDIR}/$1
 cp ${RESDIR}/$1.hex firmware.mem
 ./simv >> ${RESDIR}/$1.log

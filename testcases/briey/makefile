@@ -36,7 +36,7 @@ $(RESDIR)%.o:$(RESDIR)%.s
 	$(AS) -o $@ $<
 
 $(BIN):$(OBJS) $(LIBS)
-	$(LD) -s -e -o $@ $^
+	$(LD) -ns -ne -o $@ $^
 	$(LD) -mc=0 -o $(RESDIR)firm.elf $^
 	python3 mkhex.py $(RESDIR)firmware.bin
  

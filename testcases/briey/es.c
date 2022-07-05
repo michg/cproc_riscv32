@@ -916,8 +916,7 @@ printf_t sprintf(char *buf, const char *fmt, ... )
 
 int main(void) {
   float res = expf(2.0);
-  double res2 = exp(2.0);
-  printf("exp(2)=%f\n", res2);
+  printf("exp(2)=%f\n", res);
   res = sinf(M_PI_4);
   //printf("sin(Pi/4)=%08x\n", *(unsigned int*)&res);
   printf("sin(Pi/4)=%f\n", res);

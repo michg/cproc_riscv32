@@ -17,7 +17,7 @@ for name in src/*/; do
 	${AS} -o ${RESDIR}/start.o start.s
 	${AS} -o ${RESDIR}/io.o ${RESDIR}/io.s
 	${AS} -o ${RESDIR}/${name}.o ${RESDIR}/${name}.s
-	${LD} -s -e -o ${RESDIR}/${name}.bin ${RESDIR}/start.o ${RESDIR}/io.o ${RESDIR}/${name}.o 
+	${LD} -ns -ne -o ${RESDIR}/${name}.bin ${RESDIR}/start.o ${RESDIR}/io.o ${RESDIR}/${name}.o 
 	python3 mkhex.py ${RESDIR}/${name}
         cp ${RESDIR}/${name}.hex firmware.mem
 	./simv >> ${RESDIR}/${name}.log

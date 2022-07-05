@@ -4,3 +4,6 @@
 [submodule "elftools_riscv32"]
 	path = elftools
 	url = https://github.com/michg/elftools_riscv32
+[submodule "qbe_riscv32"]
+	path = qbe_riscv32
+	url = https://github.com/michg/qbe_riscv32
