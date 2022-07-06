@@ -1,6 +1,6 @@
 [submodule "cproc"]
 	path = cproc
-	url = https://github.com/michaelforney/cproc
+	url = https://github.com/michg/cproc
 [submodule "elftools_riscv32"]
 	path = elftools
 	url = https://github.com/michg/elftools_riscv32
