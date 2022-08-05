@@ -17,7 +17,7 @@ ${AS} -o ${RESDIR}/io.o ${RESDIR}/io.s
 ${LD} -ns -ne -o ${RESDIR}/$1.bin ${RESDIR}/start.o ${RESDIR}/io.o ${RESDIR}/$1.o
 python3 mkhex.py ${RESDIR}/$1
 cp ${RESDIR}/$1.hex firmware.mem
-./simv >> ${RESDIR}/$1.log
+./simv | head -n -1 >> ${RESDIR}/$1.log
 if cmp -s "${SRCDIR}/$1.ref" "${RESDIR}/$1.log"
    then
       echo "Testcase $1 ok."

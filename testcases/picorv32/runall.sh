@@ -20,7 +20,7 @@ for name in src/*/; do
 	${LD} -ns -ne -o ${RESDIR}/${name}.bin ${RESDIR}/start.o ${RESDIR}/io.o ${RESDIR}/${name}.o 
 	python3 mkhex.py ${RESDIR}/${name}
         cp ${RESDIR}/${name}.hex firmware.mem
-	./simv >> ${RESDIR}/${name}.log
+	./simv | head -n -1 >> ${RESDIR}/${name}.log
 	if cmp -s "${SRCDIR}/${name}.ref" "${RESDIR}/${name}.log"
 	then
 		echo "Testcase ${name} ok." >>result/results.log
