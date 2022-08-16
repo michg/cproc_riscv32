@@ -36,7 +36,7 @@ $(RESDIR)/start.o:$(SRCDIR)/start.s
 	$(AS) -o $@ $< 	
 
 $(BIN):$(OBJ) $(LIB)
-	$(LD) -t $(RESDIR)/map.txt -ns -ne -p -mc=0 -o $@ $(OBJ) $(LIB)
+	$(LD) -t $(RESDIR)/map.txt -ns -ne -mc=0 -o $@ $(OBJ) $(LIB)
 	$(LD) -p -mc=0 -o $(RESDIR)/firm.elf $(OBJ) $(LIB)
 	python3 mkhex.py $(RESDIR)/firmware
 	 
