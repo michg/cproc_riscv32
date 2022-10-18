@@ -2,11 +2,14 @@ import io
 from sys import argv
     
 with open(argv[1]+".bin", "rb") as f:
-    bindata = f.read()
+    bindata = bytearray(f.read())
 
 size =  32768
-
-assert len(bindata) < size*4
+padcnt = 4 - len(bindata) % 4
+if padcnt != 0:
+    print("Padding: %d bytes!" %padcnt)
+    for pad in range(padcnt):
+        bindata.append(0) 
 assert len(bindata) % 4 == 0
 
 f = open(argv[1]+".hex","w")
