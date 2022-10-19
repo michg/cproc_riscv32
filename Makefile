@@ -8,6 +8,7 @@ all:
 		make -C cproc all
 		make -C qbe_riscv32 install PREFIX=usr
 		make -C elftools
+		make -C libs
 		
 clean:
 		make -C cproc clean

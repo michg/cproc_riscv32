@@ -5,7 +5,7 @@ LD=../../elftools/neatld/nld
 AR = ../../elftools/ar/ar
 CFLAGS = -S -msf -I include
 
-LIBS = $(RESDIR)libfloat.a $(RESDIR)libmathhf.a
+LIBS = ../../libs/bin/libsoftfloat.a ../../libs/bin/libmathsf.a
 
 CSRCS = es.c
 ASRCS = start.s

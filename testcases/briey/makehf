@@ -5,7 +5,7 @@ LD=../../elftools/neatld/nld
 AR = ../../elftools/ar/ar
 CFLAGS = -S -I include
 
-LIBS = $(RESDIR)/libmathhf.a
+LIBS = ../../libs/bin/libmathhf.a
 
 CSRCS = es.c
 ASRCS = start.s
@@ -19,8 +19,6 @@ BIN = $(RESDIR)firmware.bin
 
 all:$(RESDIR) $(LIBS) $(BIN)
 
-$(LIBS):
-	make -r -C libmathf -f makehf
 
 $(RESDIR):
 	mkdir -p $@
