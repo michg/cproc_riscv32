@@ -921,7 +921,7 @@ int main(void) {
   //printf("sin(Pi/4)=%08x\n", *(unsigned int*)&res);
   printf("sin(Pi/4)=%f\n", res);
   res = sqrtf(2);
-  printf("sqrt(Pi/4)=%f\n", res);
+  printf("sqrt(2)=%f\n", res);
   res = logf(2);
   printf("ln(2)=%f\n", res);
   return 0;

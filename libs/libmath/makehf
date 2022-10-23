@@ -5,7 +5,8 @@ CC=../../cproc/cproc
 AS=../../elftools/minias/minias
 LD=../../elftools/neatld/nld
 AR =../../elftools/ar/ar
-CFLAGS = -S -I include
+CFLAGS = -S -I include -I ../libminlibc/include -D SINGLE_PRECISION
+
 
 
 CSRCS = $(wildcard *.c)

@@ -60,9 +60,9 @@ log10f(float x)
 	r = k_log1pf(f);
 
 	/* See e_log2f.c and e_log2.c for details. */
-	if (sizeof(float_t) > sizeof(float))
-		return (r - hfsq + f) * ((float_t)ivln10lo + ivln10hi) +
-		    y * ((float_t)log10_2lo + log10_2hi);
+	//if (sizeof(float_t) > sizeof(float))
+	//	return (r - hfsq + f) * ((float_t)ivln10lo + ivln10hi) +
+	//	    y * ((float_t)log10_2lo + log10_2hi);
 	hi = f - hfsq;
 	GET_FLOAT_WORD(hx,hi);
 	SET_FLOAT_WORD(hi,hx&0xfffff000);

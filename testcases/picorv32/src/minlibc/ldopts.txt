@@ -1,0 +1,1 @@
+../../libs/bin/libminlibc.a ../../libs/bin/libmathsf.a ../../libs/bin/libsoftfloat.a 

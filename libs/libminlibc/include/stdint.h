@@ -41,4 +41,9 @@ typedef unsigned       int  uintptr_t;
 #define UINT32_MAX  0xffffffffU
 #define UINT64_MAX  0xffffffffffffffffULL
 
+typedef uint8_t u_int8_t;  /* unsigned integrals (deprecated) */
+typedef uint16_t u_int16_t;
+typedef uint32_t u_int32_t;
+typedef uint64_t u_int64_t; 
+
 #endif

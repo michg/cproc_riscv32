@@ -12,15 +12,10 @@
 
 #ifndef _LIBM_H
 #define _LIBM_H
-#include <sys/param.h>
 #include <stdint.h>
 #include <float.h>
 #include <math.h>
-//#include <complex.h>
 
-//#include "longdbl.h"
-
-//#include "libc.h"
 
 union fshape {
 	float value;

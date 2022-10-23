@@ -71,8 +71,8 @@ log2f(float x)
 	 * expression have type float_t, so return is forced to waste
 	 * time clobbering its extra precision.
 	 */
-	if (sizeof(float_t) > sizeof(float))
-		return (r - hfsq + f) * ((float_t)ivln2lo + ivln2hi) + y;
+	//if (sizeof(float_t) > sizeof(float))
+	//	return (r - hfsq + f) * ((float_t)ivln2lo + ivln2hi) + y;
 
 	hi = f - hfsq;
 	GET_FLOAT_WORD(hx,hi);

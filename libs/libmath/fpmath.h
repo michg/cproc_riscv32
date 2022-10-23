@@ -27,9 +27,6 @@
  * $FreeBSD: stable/9/lib/libc/include/fpmath.h 186461 2008-12-23 22:20:59Z marcel $
  */
 
-#include <sys/endian.h>
-#include <mips/_fpmath.h>
-
 #ifndef _IEEE_WORD_ORDER
 #define	_IEEE_WORD_ORDER	_BYTE_ORDER
 #endif

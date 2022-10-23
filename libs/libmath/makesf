@@ -5,7 +5,7 @@ CC=../../cproc/cproc
 AS=../../elftools/minias/minias
 LD=../../elftools/neatld/nld
 AR =../../elftools/ar/ar
-CFLAGS = -S -msf -I include -include sys/param.h -D SINGLE_PRECISION
+CFLAGS = -S -msf -I include -I ../libminlibc/include -D SINGLE_PRECISION
 
 
 
