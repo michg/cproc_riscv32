@@ -16,7 +16,8 @@ ${AS} -o ${RESDIR}/$1.o ${RESDIR}/$1.s
 ${AS} -o ${RESDIR}/start.o start.s
 ${CC} ${CFLAGS} io.c -o ${RESDIR}/io.s
 ${AS} -o ${RESDIR}/io.o ${RESDIR}/io.s
-${LD} -ns -ne -o ${RESDIR}/$1.bin ${RESDIR}/start.o ${RESDIR}/io.o ${RESDIR}/$1.o ${ldopts}
+${LD} -mc=0 -t ${RESDIR}/map.txt -ns -ne -o ${RESDIR}/$1.bin ${RESDIR}/start.o ${RESDIR}/io.o ${RESDIR}/$1.o ${ldopts}
+${LD} -mc=0 -o ${RESDIR}/$1.elf ${RESDIR}/start.o ${RESDIR}/io.o ${RESDIR}/$1.o ${ldopts}
 python3 mkhex.py ${RESDIR}/$1
 cp ${RESDIR}/$1.hex firmware.mem
 ./simv | head -n -1 >> ${RESDIR}/$1.log

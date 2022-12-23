@@ -9,6 +9,6 @@
 
 #include <stdio.h>
 
-#define assert(x) ((!(x)) ? pabort("Assertion failed at %s:%d\n", __FILE__, __LINE__) : 0)
+#define assert(x) if(!(x)) pabort("Assertion failed at %s:%d\n", __FILE__, __LINE__)
 
 #endif

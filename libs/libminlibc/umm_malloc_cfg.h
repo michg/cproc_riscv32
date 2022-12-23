@@ -64,7 +64,7 @@
 
 // ----------------------------------------------------------------------------
 // Size of the heap in bytes
-#define UMM_MALLOC_CFG__HEAP_SIZE 8192
+#define UMM_MALLOC_CFG__HEAP_SIZE 16384
 
 // ----------------------------------------------------------------------------
 // A couple of macros to make packing structures less compiler dependent
@@ -84,11 +84,11 @@
 #define UMM_CRITICAL_ENTRY()
 #define UMM_CRITICAL_EXIT()
 
-#define umm_free    runtime_free
-#define umm_malloc  runtime_alloc
-#define umm_realloc runtime_realloc
+#define umm_free    free
+#define umm_malloc  malloc
+#define umm_realloc realloc
 
-
+//#define UMM_DBG_LOG_LEVEL 6
 #endif // _UMM_MALLOC_CFG_H
 /***************************************************************************************************
   end of file
