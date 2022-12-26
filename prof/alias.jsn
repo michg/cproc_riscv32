@@ -1,0 +1,5 @@
+{
+"CLK":["system_tb.clk"],
+"PC":["system_tb.uut.picorv32_core.reg_pc [31:0]"],
+"X10":["system_tb.uut.picorv32_core.\\cpuregs[10] [31:0]"]
+}
